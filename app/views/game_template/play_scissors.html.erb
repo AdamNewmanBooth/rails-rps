@@ -1,21 +1,23 @@
-get("/scissors") do
-words = ["Rock", "Paper", "Scissors"]
-      picked_word = words.sample
-      puts picked_word
-    
-    result=if picked_word=="Rock"
-  "We Lost!"
-    elsif picked_word=="Paper"
-    "We Won!"
-    else "We Tied!"
-    end
 
-  <ul>
-<li><a href="/rock">Play Rock</a></li>
-<li><a href="/paper">Play Paper</a></li>
-<li><a href="/scissors">Play Scissors</a></li>
-</ul>
+<a href="/rock">Play Rock</a>
+<a href="/paper">Play Paper</a>
+<a href="/scissors">Play Scissors</a>
 
-    We played Scissors\nThey played #{picked_word}!\n #{result}\n<li><a href=\"/\">Rules</a></li>"
 
-  end
+<h1> We played Scissors </h1>
+<h1> They played <%= @random_move %>!</h1>
+<h1> <%= @result %> <h1>
+
+<%=
+result = if @random_move == "Rock"
+           "We Lost!"
+         elsif @random_move == "Paper"
+           "We Won!"
+         else
+           "We Tied!"
+         end
+%>
+
+
+
+  <li><a href="/">Rules</a></li>"
