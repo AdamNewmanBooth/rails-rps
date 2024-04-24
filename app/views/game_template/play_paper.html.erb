@@ -1,0 +1,19 @@
+words = ["Rock", "Paper", "Scissors"]
+    picked_word = words.sample
+    puts picked_word
+
+  result=if picked_word=="Rock"
+  "We Won!"
+  elsif picked_word=="Paper"
+ "We Tied!"
+  else "We Lost!"
+  end
+<ul>
+<li><a href="/rock">Play Rock</a></li>
+<li><a href="/paper">Play Paper</a></li>
+<li><a href="/scissors">Play Scissors</a></li>
+</ul>
+
+  We played Paper\nThey played #{picked_word}!\n#{result}\n<li><a href=\"/\">Rules</a></li>"
+  
+end
